@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ING – Inspiring Next Generation</title>
+    <!-- Include Font Awesome in your <head> if not already -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2596be; /* Primary Blue */
+        --primary-light: #5c7cb3; /* Secondary Blue */
+        --primary-dark: #1e3a55; /* Darker Blue for text */
+        --background: #f3f6fa; /* Background Color */
+        --text: #3c2f2f; /* Text Color */
+        --accent: #2596be; /* Primary Blue */
+        --accent-alt: #5c7cb3; /* Secondary Blue */
+        --subtle: #606c38; /* Subtle Color */
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--background)] text-[var(--text)]">
+    <!-- Navbar -->
+    <header
+      class="flex justify-between items-center px-6 py-4 bg-[var(--background)] shadow-md sticky top-0 z-50"
+    >
+      <h1 class="text-2xl font-bold text-[var(--primary)]">LOGO</h1>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 font-medium relative">
+        <a href="#" class="hover:text-[var(--accent-alt)]">Home</a>
+
+        <!-- Dropdown -->
+        <div class="relative">
+          <!-- Trigger -->
+          <button class="peer hover:text-[var(--accent-alt)]">
+            Programs ▾
+          </button>
+
+          <!-- Dropdown content (stays open on hover of trigger or dropdown) -->
+          <div
+            class="absolute hidden peer-hover:flex hover:flex flex-col bg-[var(--background)] shadow-lg mt-2 rounded border border-[var(--subtle)] z-50"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Tech Skills</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Leadership</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Entrepreneurship</a
+            >
+          </div>
+        </div>
+
+        <a href="#" class="hover:text-[var(--accent-alt)]">Events</a>
+        <a href="#" class="hover:text-[var(--accent-alt)]">About Us</a>
+        <a
+          href="#"
+          class="text-[var(--primary-light)] hover:text-[var(--accent)] font-semibold"
+          >Login</a
+        >
+      </nav>
+
+      <!-- Mobile Nav (unchanged) -->
+      <div class="md:hidden relative">
+        <button id="mobile-menu-toggle" class="text-2xl">☰</button>
+        <div
+          id="mobile-menu"
+          class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] shadow-lg rounded-md z-50"
+        >
+          <a
+            href="#"
+            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+            >Home</a
+          >
+          <button
+            id="mobile-dropdown-toggle"
+            class="w-full text-left px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+          >
+            Programs ▾
+          </button>
+          <div id="mobile-dropdown" class="hidden flex-col">
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Tech Skills</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Leadership</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Entrepreneurship</a
+            >
+          </div>
+          <a
+            href="#"
+            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+            >Events</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 text-[var(--primary-light)] hover:text-white hover:bg-[var(--accent)] font-semibold"
+            >Login</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Toggle Script -->
+
+    <!-- Hero Section -->
+
+    <section
+      class="relative flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 bg-[var(--background)] text-[var(--text)] overflow-hidden"
+    >
+      <!-- Left Text -->
+      <!-- Left Text -->
+      <!-- Left Text -->
+
+      <div class="md:w-1/2 w-full mb-8 md:mb-0 z-10 px-4 sm:px-8">
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-4 leading-tight wrap-word"
+        >
+          <span class="text-[var(--primary)]">Inspiration.</span>
+          <span class="text-[var(--primary-light)]">Empowerment.</span>
+          <span class="text-[var(--primary-dark)]">Transformation.</span>
+        </h2>
+        <p
+          class="text-lg sm:text-xl md:text-lg leading-relaxed text-[var(--text)]"
+        >
+          At <span class="text-[var(--primary-dark)] font-semibold">ING</span>,
+          the mission is clear: to
+          <span class="text-[var(--primary)]">ignite purpose</span> within young
+          minds,
+          <span class="text-[var(--primary-light)]">equipping them</span> with
+          the tools, mentorship, and skills needed to drive meaningful change.
+          By fostering the next generation of leaders, ING empowers individuals
+          to become the
+          <span class="text-[var(--primary-dark)] font-semibold">
+            change agents
+          </span>
+          their communities need, shaping a brighter, more dynamic future.
+        </p>
+      </div>
+
+      <!-- Image Box with Zigzag Effect on the Right Side -->
+      <div class="md:w-1/2 w-full relative flex justify-center z-0">
+        <div class="relative w-full max-w-md md:max-w-full overflow-hidden">
+          <!-- Zigzag Clip on Right Side of Image -->
+          <svg
+            class="absolute inset-0 w-full h-full z-10 pointer-events-none"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <clipPath id="zigzagClipRight" clipPathUnits="objectBoundingBox">
+                <path
+                  d="M1,0 L1,1 Q0.95,0.8 0.9,0.9 Q0.85,1 0.8,0.9 Q0.75,0.8 0.7,0.9 Q0.65,1 0.6,0.9 Q0.55,0.8 0.5,0.9 Q0.45,1 0.4,0.9 Q0.35,0.8 0.3,0.9 Q0.25,1 0.2,0.9 Q0.15,0.8 0.1,0.9 Q0.05,1 0,0.9 L0,0 Z"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <img
+            src="img/hands.jpg"
+            alt="Inspiration"
+            class="rounded-xl shadow-lg w-full h-auto object-cover transition-all duration-[2000ms] md:object-cover md:w-full md:h-auto"
+            style="clip-path: url(#zigzagClipRight)"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- statement section -->
+    <section
+      class="bg-[var(--background)] text-[var(--text)] px-6 py-12 flex flex-col items-center justify-center relative"
+    >
+      <!-- Breadcrumbs - top left -->
+      <div class="w-full max-w-7xl px-4 md:px-8 mb-8">
+        <p class="text-sm text-[var(--primary-light)]">
+          <a href="#" class="hover:text-[var(--accent-alt)]">Home</a> &gt;
+          <a href="#" class="hover:text-[var(--accent-alt)]">Commitment</a> &gt;
+          <a href="#" class="hover:text-[var(--accent-alt)]"
+            >Education Impact</a
+          >
+        </p>
+      </div>
+
+      <!-- Main content boxes -->
+      <div
+        class="flex flex-col md:flex-row gap-12 w-full max-w-7xl items-center justify-between flex-1"
+      >
+        <!-- Left Box with blurred background image -->
+        <div
+          class="w-full md:w-1/2 relative px-4 py-8 h-[300px] sm:h-[400px] md:h-auto"
+        >
+          <!-- Background image -->
+          <!-- <div
+            class="absolute inset-0 bg-center bg-no-repeat bg-cover filter blur-sm"
+            style="
+              background-image: url('/img/young-vill-boy.webp');
+              z-index: 0;
+            "
+          ></div> -->
+          <!-- Blurred background image -->
+          <div
+            class="absolute inset-0 bg-center bg-no-repeat bg-cover filter blur-sm z-0"
+            style="background-image: url('/img/young-vill-boy.webp')"
+          ></div>
+
+          <!-- Dark overlay to improve text contrast -->
+          <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+          <!-- Overlay (optional darker tint to improve text visibility) -->
+          <div class="absolute inset-0 bg-black/20 z-0"></div>
+
+          <!-- Text content -->
+          <div class="relative z-10">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-medium sm:font-semibold leading-relaxed text-[var(--primary)]"
+            >
+              There are many paths to building the future.<br />
+              We have <br />chosen education.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Right Box (text content) -->
+        <div class="w-full md:w-1/2 text-left px-4 md:px-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[var(--primary)]">
+            Shaping the Future through Education
+          </h2>
+          <p class="text-lg mb-4 text-[var(--primary-dark)]">
+            Our educational commitment isn’t just about classrooms — it's about
+            creating access, inspiring growth, and supporting communities where
+            learning can thrive.
+          </p>
+          <p class="text-base text-[var(--primary-dark)] mb-6">
+            Through partnerships and purposeful giving, we’re building
+            foundations that last — helping people grow, lead, and change their
+            world through learning.
+          </p>
+          <a
+            href="https://your-foundation-link.com"
+            class="inline-block px-6 py-3 bg-[var(--accent)] text-white rounded-md hover:bg-[var(--accent-alt)] transition"
+          >
+            Learn More About Our Foundation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-16 px-6 text-center max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+      <p class="text-lg">
+        We believe in building a world where every young person in our community
+        has access to the tools and support needed to develop skills, find
+        direction, and make a lasting impact.
+      </p>
+    </section>
+
+    <!-- Commitment -->
+    <!-- <section class="py-16 px-6 bg-[var(--primary-light)]/10">
+      <div
+        class="max-w-4xl mx-auto text-center bg-white/70 backdrop-blur rounded-xl shadow-lg p-8 border border-[var(--primary-light)]"
+      >
+        <h2 class="text-3xl font-bold mb-4">Our Commitment</h2>
+        <p class="text-lg mb-6">
+          There are many paths to building the future. We have chosen education.
+          ING is committed to nurturing the potential of young people across
+          Africa.
+        </p>
+        <a
+          href="/about"
+          class="bg-[var(--primary)] text-white px-6 py-3 rounded-full font-medium hover:bg-[var(--primary-light)] transition"
+        >
+          Learn More About ING
+        </a>
+      </div>
+    </section> -->
+
+    <section
+      class="relative py-20 px-6 text-white text-center bg-fixed bg-cover bg-center"
+      style="
+        background-image: url('/img/moon.avif');
+        /* background-color: var(--primary-dark); */
+      "
+    >
+      <!-- Dark overlay for readability -->
+      <div class="absolute inset-0 backdrop-blur-sm z-2"></div>
+
+      <!-- Content container -->
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <h2
+          class="text-4xl font-extrabold mb-4 tracking-wide uppercase text-[var(--accent)] drop-shadow-md"
+        >
+          Our Commitment
+        </h2>
+        <p
+          class="text-xl mb-8 font-medium text-[var(--background)] drop-shadow-sm"
+        >
+          There are many paths to building the future. We have chosen
+          <span class="font-bold text-[var(--background)]">education</span>. ING
+          is committed to nurturing the potential of young people across Africa.
+        </p>
+
+        <!-- CTA Button -->
+        <a
+          href="/about"
+          class="inline-flex items-center gap-2 bg-[var(--accent)] hover:bg-[var(--accent-alt)] text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
+            />
+          </svg>
+          Learn More About ING
+        </a>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <!-- Programs -->
+    <!-- Programs -->
+    <section class="py-24 px-6 bg-[var(--background)]">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-16 text-[var(--primary-dark)]">
+          Programs
+        </h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <!-- Card -->
+          <div
+            class="bg-white shadow-xl border border-[var(--primary)] rounded-2xl p-6 flex flex-col"
+          >
+            <img
+              src="/img/techboy.webp"
+              alt="Tech Skills"
+              class="mb-6 rounded-xl w-full h-72 object-cover"
+            />
+            <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-dark)]">
+              Tech Skills Training
+            </h3>
+            <p class="text-[var(--text)] mb-4">
+              From coding to digital literacy — preparing youths for the digital
+              economy.
+            </p>
+            <a
+              href="/join-tech"
+              class="inline-block bg-[var(--accent)] hover:bg-[var(--accent-alt)] text-white font-semibold px-6 py-3 rounded-full transition"
+            >
+              Join
+            </a>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-white shadow-xl border border-[var(--primary)] rounded-2xl p-6 flex flex-col"
+          >
+            <img
+              src="/img/hands.jpg"
+              alt="Leadership"
+              class="mb-6 rounded-xl w-full h-72 object-cover"
+            />
+            <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-dark)]">
+              Leadership Programs
+            </h3>
+            <p class="text-[var(--text)] mb-4">
+              Empowering young people to lead change in their communities.
+            </p>
+            <a
+              href="/join-leadership"
+              class="inline-block bg-[var(--accent)] hover:bg-[var(--accent-alt)] text-white font-semibold px-6 py-3 rounded-full transition"
+            >
+              Join
+            </a>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-white shadow-xl border border-[var(--primary)] rounded-2xl p-6 flex flex-col"
+          >
+            <img
+              src="/img/worksho.webp"
+              alt="Entrepreneurship"
+              class="mb-6 rounded-xl w-full h-72 object-cover"
+            />
+            <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-dark)]">
+              Entrepreneurship
+            </h3>
+            <p class="text-[var(--text)] mb-4">
+              Helping youths build businesses that solve real problems.
+            </p>
+            <a
+              href="/join-entrepreneurship"
+              class="inline-block bg-[var(--accent)] hover:bg-[var(--accent-alt)] text-white font-semibold px-6 py-3 rounded-full transition"
+            >
+              Join
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-6 bg-[var(--background)]">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-12">Voices of Impact</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial Card -->
+          <div
+            class="bg-[var(--primary)]/10 p-6 rounded-xl shadow flex flex-col items-center text-center h-full"
+          >
+            <img
+              src="/img/voice-1-man.webp"
+              alt="Amina B."
+              class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-white shadow-md"
+            />
+            <p class="italic">
+              “Joining ING changed my life. I found my purpose and started a
+              career in tech I never thought possible.”
+            </p>
+            <h4 class="mt-4 font-semibold">— Ikenna, Youth Leader Alumni</h4>
+          </div>
+
+          <!-- Testimonial Card -->
+          <div
+            class="bg-[var(--primary)]/10 p-6 rounded-xl shadow flex flex-col items-center text-center h-full"
+          >
+            <img
+              src="/img/voice-2.webp"
+              alt="Chukwudi E."
+              class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-white shadow-md"
+            />
+            <p class="italic">
+              “Thanks to ING’s leadership program, I now lead a youth group in
+              my community.”
+            </p>
+            <h4 class="mt-4 font-semibold">— Chukwudi E., Tech Skills</h4>
+          </div>
+
+          <!-- Testimonial Card -->
+          <div
+            class="bg-[var(--primary)]/10 p-6 rounded-xl shadow flex flex-col items-center text-center h-full"
+          >
+            <img
+              src="/img/voice-3.avif"
+              alt="Abonyi Faith."
+              class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-white shadow-md"
+            />
+            <p class="italic">
+              “The mentorship I got from ING helped me turn my business idea
+              into a real company.”
+            </p>
+            <h4 class="mt-4 font-semibold">— Abony Fs., Entrepreneur</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Event -->
+    <section class="py-16 px-6 text-center max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Next Event</h2>
+      <p class="text-lg mb-4">"Digital Skills Bootcamp" – July 20, 2025</p>
+      <a href="/events" class="underline text-[var(--subtle)] font-medium"
+        >View all events</a
+      >
+    </section>
+    <!-- Get Involved -->
+    <!-- Get Involved -->
+    <!-- Get Involved -->
+    <section
+      class="relative py-20 px-6 text-white text-center bg-fixed bg-cover bg-center"
+      style="
+        background-image: url('/img/hands.jpg');
+        background-color: var(--primary-dark);
+      "
+    >
+      <!-- Lighter overlay for better readability -->
+      <div
+        class="absolute inset-0 bg-[var(--primary-dark)]/60 backdrop-blur-sm z-0"
+      ></div>
+
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <h2
+          class="text-4xl font-extrabold mb-4 tracking-wide uppercase text-[var(--accent)] drop-shadow-md"
+        >
+          Get Involved
+        </h2>
+        <p class="text-xl mb-8 font-medium text-white drop-shadow-sm">
+          Be the spark. Join us as a
+          <span class="font-bold text-[var(--background)]">volunteer</span>,
+          <span class="font-bold text-[var(--background)]">mentor</span>, or
+          <span class="font-bold text-[var(--background)]">donor</span>.
+        </p>
+
+        <!-- CTA Button -->
+        <a
+          href="/Login"
+          class="inline-flex items-center gap-2 bg-[var(--accent)] hover:bg-[var(--accent-alt)] text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
+            />
+          </svg>
+          Join the Movement
+        </a>
+      </div>
+    </section>
+
+    <!-- Community Development Section -->
+    <section class="bg-[var(--background)] py-20 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <!-- Carousel -->
+        <div
+          class="swiper w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/img/voice-2.webp"
+                alt="Community Action"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/hands.jpg"
+                alt="Youth Mentorship"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/young-vill-boy.webp"
+                alt="Empowerment Projects"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Write-up -->
+        <div class="text-[var(--primary-dark)]">
+          <h2 class="text-4xl font-bold mb-6 leading-tight">
+            Why <span class="text-[var(--primary)]">Community Development</span
+            ><br />
+            Is Everything
+          </h2>
+          <p class="text-lg mb-6">
+            Real progress begins at the grassroots. Community development is the
+            seed from which innovation, leadership, and opportunity grow. It
+            bridges gaps, empowers voices, and fuels generational change.
+          </p>
+          <p class="text-md mb-6 text-[var(--subtle)] italic">
+            “When communities rise, nations flourish.”
+          </p>
+          <a
+            href="/get-involved"
+            class="inline-block bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white px-6 py-3 rounded-full font-semibold transition"
+          >
+            Get Involved
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[var(--primary-dark)] text-white py-16 px-6 mt-20">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start"
+      >
+        <!-- About -->
+        <div class="md:col-span-1 text-left">
+          <h2 class="text-2xl font-semibold mb-4">ING Foundation</h2>
+          <p>
+            At ING, we're redefining access to learning, entrepreneurship, and
+            digital opportunity. Every solution we build is a step towards a
+            brighter future for all.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-1 text-left">
+          <h3 class="font-semibold mb-2">Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Image Slider -->
+        <div class="md:col-span-1 md:order-last w-full">
+          <div
+            class="relative overflow-hidden rounded-lg h-40 md:h-48 shadow-md"
+          >
+            <img
+              src="/img/young-vill-boy.webp"
+              alt="Slide 1"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slide-img"
+            />
+            <img
+              src="/img/techboy.webp"
+              alt="Slide 2"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slide-img"
+            />
+            <img
+              src="/img/young-vill-boy.webp"
+              alt="Slide 3"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slide-img"
+            />
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="md:col-span-1 text-left md:text-right">
+          <h3 class="font-semibold mb-2 text-white">Follow Us</h3>
+          <div class="flex justify-start md:justify-end space-x-4 text-2xl">
+            <a
+              href="https://facebook.com"
+              class="text-[#1877f2]"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://twitter.com"
+              class="text-[#1da1f2]"
+              aria-label="Twitter"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://instagram.com"
+              class="text-[#e1306c]"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://wa.me/234XXXXXXXXXX"
+              class="text-[#25d366]"
+              aria-label="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-left text-sm">
+        <p>&copy; 2025 ING Foundation. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        effect: "fade",
+      });
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const dropdownToggle = document.getElementById("mobile-dropdown-toggle");
+      const dropdown = document.getElementById("mobile-dropdown");
+
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      dropdownToggle.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+      });
+
+      const slides = document.querySelectorAll(".slide-img");
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("opacity-100");
+        slides[currentSlide].classList.add("opacity-0");
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.remove("opacity-0");
+        slides[currentSlide].classList.add("opacity-100");
+      }, 4000); // Change every 4 seconds
+    </script>
+  </body>
+</html>
