@@ -29,10 +29,39 @@
   </head>
   <body class="bg-[var(--background)] text-[var(--text)]">
     <!-- Navbar -->
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <header
       class="flex justify-between items-center px-6 py-4 bg-[var(--background)] shadow-md sticky top-0 z-50"
     >
+      <!-- Logo -->
       <h1 class="text-2xl font-bold text-[var(--primary)]">LOGO</h1>
+
+      <!-- Social Icons (Visible on all screens) -->
+      <div class="flex items-center space-x-4 text-xl md:ml-6">
+        <a
+          href="https://twitter.com"
+          class="text-[#1da1f2] hover:scale-110 transition-transform"
+          aria-label="Twitter"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://wa.me/234XXXXXXXXXX"
+          class="text-[#25d366] hover:scale-110 transition-transform"
+          aria-label="WhatsApp"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-6 font-medium relative">
@@ -45,7 +74,7 @@
             Programs ▾
           </button>
 
-          <!-- Dropdown content (stays open on hover of trigger or dropdown) -->
+          <!-- Dropdown content -->
           <div
             class="absolute hidden peer-hover:flex hover:flex flex-col bg-[var(--background)] shadow-lg mt-2 rounded border border-[var(--subtle)] z-50"
           >
@@ -76,7 +105,7 @@
         >
       </nav>
 
-      <!-- Mobile Nav (unchanged) -->
+      <!-- Mobile Nav -->
       <div class="md:hidden relative">
         <button id="mobile-menu-toggle" class="text-2xl">☰</button>
         <div
@@ -165,12 +194,21 @@
           </span>
           their communities need, shaping a brighter, more dynamic future.
         </p>
+
+        <div class="mt-6">
+          <a
+            href="#get-started"
+            class="inline-block bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold px-6 py-3 rounded-xl shadow-md transition duration-300"
+          >
+          Learn more about us
+          </a>
+        </div>
+      </div>
       </div>
 
-      <!-- Image Box with Zigzag Effect on the Right Side -->
-      <div class="md:w-1/2 w-full relative flex justify-center z-0">
-        <div class="relative w-full max-w-md md:max-w-full overflow-hidden">
-          <!-- Zigzag Clip on Right Side of Image -->
+      <!-- Image Box with Zigzag on Bottom for Small Screens -->
+      <div class="md:hidden w-full relative flex justify-center z-0">
+        <div class="relative w-full max-w-md overflow-hidden">
           <svg
             class="absolute inset-0 w-full h-full z-10 pointer-events-none"
             viewBox="0 0 100 100"
@@ -179,16 +217,70 @@
             <defs>
               <clipPath id="zigzagClipRight" clipPathUnits="objectBoundingBox">
                 <path
-                  d="M1,0 L1,1 Q0.95,0.8 0.9,0.9 Q0.85,1 0.8,0.9 Q0.75,0.8 0.7,0.9 Q0.65,1 0.6,0.9 Q0.55,0.8 0.5,0.9 Q0.45,1 0.4,0.9 Q0.35,0.8 0.3,0.9 Q0.25,1 0.2,0.9 Q0.15,0.8 0.1,0.9 Q0.05,1 0,0.9 L0,0 Z"
+                  d="M1,0 L1,1 Q0.95,0.8 0.9,0.9 Q0.85,1 0.8,0.9 Q0.75,0.8 0.7,0.9 
+               Q0.65,1 0.6,0.9 Q0.55,0.8 0.5,0.9 Q0.45,1 0.4,0.9 
+               Q0.35,0.8 0.3,0.9 Q0.25,1 0.2,0.9 Q0.15,0.8 0.1,0.9 
+               Q0.05,1 0,0.9 L0,0 Z"
                 />
               </clipPath>
             </defs>
           </svg>
-          <img
+          <!-- <img
             src="img/hands.jpg"
             alt="Inspiration"
-            class="rounded-xl shadow-lg w-full h-auto object-cover transition-all duration-[2000ms] md:object-cover md:w-full md:h-auto"
+            class="rounded-xl shadow-lg w-full h-auto object-cover transition-all duration-[2000ms]"
             style="clip-path: url(#zigzagClipRight)"
+          /> -->
+          <img
+            id="smallScreenImage"
+            src="img/hands.jpg"
+            alt="Inspiration"
+            class="rounded-xl shadow-lg w-full h-auto object-cover transition-all duration-[2000ms]"
+            style="clip-path: url(#zigzagClipRight)"
+          />
+        </div>
+      </div>
+
+      <!-- Image Box with Zigzag on Left for Medium and Larger Screens -->
+      <div class="hidden md:flex md:w-1/2 relative justify-center z-0">
+        <div class="relative w-full max-w-md md:max-w-full overflow-hidden">
+          <svg
+            class="absolute inset-0 w-full h-full z-10 pointer-events-none"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <clipPath id="zigzagClipLeftY" clipPathUnits="objectBoundingBox">
+                <path
+                  d="M0,0 
+               Q0.05,0.05 0,0.1 
+               Q0.05,0.15 0,0.2 
+               Q0.05,0.25 0,0.3 
+               Q0.05,0.35 0,0.4 
+               Q0.05,0.45 0,0.5 
+               Q0.05,0.55 0,0.6 
+               Q0.05,0.65 0,0.7 
+               Q0.05,0.75 0,0.8 
+               Q0.05,0.85 0,0.9 
+               Q0.05,0.95 0,1 
+               L1,1 L1,0 Z"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <!-- <img
+            src="img/hands.jpg"
+            alt="Inspiration"
+            class="rounded-xl shadow-lg w-full h-auto object-cover transition-all duration-[2000ms]"
+            style="clip-path: url(#zigzagClipLeftY)"
+          /> -->
+
+          <img
+            id="largeScreenImage"
+            src="img/hands.jpg"
+            alt="Inspiration"
+            class="rounded-xl shadow-lg w-full h-auto object-cover transition-all duration-[2000ms]"
+            style="clip-path: url(#zigzagClipLeftY)"
           />
         </div>
       </div>
@@ -217,19 +309,24 @@
         <div
           class="w-full md:w-1/2 relative px-4 py-8 h-[300px] sm:h-[400px] md:h-auto"
         >
-          <!-- Background image -->
-          <!-- <div
-            class="absolute inset-0 bg-center bg-no-repeat bg-cover filter blur-sm"
-            style="
-              background-image: url('/img/young-vill-boy.webp');
-              z-index: 0;
-            "
-          ></div> -->
+      
+    
           <!-- Blurred background image -->
-          <div
-            class="absolute inset-0 bg-center bg-no-repeat bg-cover filter blur-sm z-0"
-            style="background-image: url('/img/young-vill-boy.webp')"
-          ></div>
+         <!-- Background Image with Enhanced Design -->
+<div
+class="absolute inset-0 bg-center bg-no-repeat bg-cover z-2 filter brightness-[0.4] blur-sm"
+style="background-image: url('/img/dark-night.avif')"
+></div>
+
+<!-- Optional SVG Pattern Overlay -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-10 mix-blend-overlay">
+<img src="/img/education-pattern.svg" alt="Overlay pattern" class="w-full h-full object-cover" />
+</div>
+
+<!-- Overlay Layers -->
+<div class="absolute inset-0 bg-black/60 z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--primary)]/10 z-0"></div>
+
 
           <!-- Dark overlay to improve text contrast -->
           <div class="absolute inset-0 bg-black/50 z-0"></div>
@@ -504,7 +601,7 @@
     <section
       class="relative py-20 px-6 text-white text-center bg-fixed bg-cover bg-center"
       style="
-        background-image: url('/img/hands.jpg');
+        background-image: url('/img/premium_photo-1686064771021-fbd6e301a0e4.avif');
         background-color: var(--primary-dark);
       "
     >
@@ -743,6 +840,43 @@
         slides[currentSlide].classList.remove("opacity-0");
         slides[currentSlide].classList.add("opacity-100");
       }, 4000); // Change every 4 seconds
+
+      const smallScreenImages = [
+        "img/two-young-girls-in-classroom.webp",
+        "img/school-children.webp",
+        "img/hands.jpg",
+        "img/worksho.webp",
+        "img/school-children.webp",
+      ];
+
+      const largeScreenImages = [
+        "img/two-young-girls-in-classroom.webp",
+        "img/school-children.webp",
+        "img/hands.jpg",
+        "img/worksho.webp",
+        "img/school-children.webp",
+      ];
+
+      let currentIndex = 0;
+
+      function updateImages() {
+        const smallImg = document.getElementById("smallScreenImage");
+        const largeImg = document.getElementById("largeScreenImage");
+
+        // Update only if element exists (in case one is hidden on screen)
+        if (smallImg) {
+          smallImg.src = smallScreenImages[currentIndex];
+        }
+        if (largeImg) {
+          largeImg.src = largeScreenImages[currentIndex];
+        }
+
+        // Cycle to next image
+        currentIndex = (currentIndex + 1) % smallScreenImages.length;
+      }
+
+      // Change every 5 seconds
+      setInterval(updateImages, 5000);
     </script>
   </body>
 </html>
