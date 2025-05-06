@@ -25,6 +25,11 @@
         --accent-alt: #5c7cb3; /* Secondary Blue */
         --subtle: #606c38; /* Subtle Color */
       }
+
+        /* h2 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  } */
+
     </style>
   </head>
   <body class="bg-[var(--background)] text-[var(--text)]">
@@ -36,128 +41,89 @@
     />
 
     <header
-      class="flex justify-between items-center px-6 py-4 bg-[var(--background)] shadow-md sticky top-0 z-50"
-    >
-      <!-- Logo -->
-      <h1 class="text-2xl font-bold text-[var(--primary)]">LOGO</h1>
-
-      <!-- Social Icons (Visible on all screens) -->
-      <div class="flex items-center space-x-4 text-xl md:ml-6">
-        <a
-          href="https://twitter.com"
-          class="text-[#1da1f2] hover:scale-110 transition-transform"
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener"
+    class="flex justify-between items-center px-6 py-4 bg-[var(--background)] shadow-md sticky top-0 z-50"
+  >
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-[var(--primary)]">LOGO</h1>
+  
+    <!-- Social Icons -->
+    <div class="flex items-center space-x-4 text-xl md:ml-6">
+      <a href="https://twitter.com" class="text-[#1da1f2] hover:scale-110 transition-transform" target="_blank">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://wa.me/234XXXXXXXXXX" class="text-[#25d366] hover:scale-110 transition-transform" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 font-medium items-center relative">
+      <a href="#" class="hover:text-[var(--accent-alt)]">Home</a>
+  
+      <!-- Programs Dropdown -->
+      <div class="relative">
+        <button
+          id="desktop-dropdown-toggle"
+          class="hover:text-[var(--accent-alt)] focus:outline-none"
         >
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        <a
-          href="https://wa.me/234XXXXXXXXXX"
-          class="text-[#25d366] hover:scale-110 transition-transform"
-          aria-label="WhatsApp"
-          target="_blank"
-          rel="noopener"
+          Programs ▾
+        </button>
+        <div
+          id="desktop-dropdown"
+          class="hidden absolute left-0 mt-2 flex-col bg-[var(--background)] shadow-lg rounded border border-[var(--subtle)] z-50 min-w-[160px]"
         >
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6 font-medium relative">
-        <a href="#" class="hover:text-[var(--accent-alt)]">Home</a>
-
-        <!-- Dropdown -->
-        <div class="relative">
-          <!-- Trigger -->
-          <button class="peer hover:text-[var(--accent-alt)]">
-            Programs ▾
-          </button>
-
-          <!-- Dropdown content -->
-          <div
-            class="absolute hidden peer-hover:flex hover:flex flex-col bg-[var(--background)] shadow-lg mt-2 rounded border border-[var(--subtle)] z-50"
-          >
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-              >Tech Skills</a
-            >
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-              >Leadership</a
-            >
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-              >Entrepreneurship</a
-            >
-          </div>
+          <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Tech Skills</a>
+          <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Leadership</a>
+          <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Entrepreneurship</a>
         </div>
-
-        <a href="#" class="hover:text-[var(--accent-alt)]">Events</a>
-        <a href="#" class="hover:text-[var(--accent-alt)]">About Us</a>
+      </div>
+  
+      <a href="#" class="hover:text-[var(--accent-alt)]">Events</a>
+      <a href="#" class="hover:text-[var(--accent-alt)]">About Us</a>
+  
+      <!-- Login Button -->
+      <a
+        href="#"
+        class="ml-2 px-4 py-2 bg-[var(--primary-light)] text-white rounded-md font-semibold hover:bg-[var(--accent)] transition-colors"
+      >
+        Login
+      </a>
+    </nav>
+  
+    <!-- Mobile Nav -->
+    <div class="md:hidden relative">
+      <button id="mobile-menu-toggle" class="text-2xl">☰</button>
+      <div
+        id="mobile-menu"
+        class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] shadow-lg rounded-md z-50"
+      >
+        <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Home</a>
+        <button
+          id="mobile-dropdown-toggle"
+          class="w-full text-left px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+        >
+          Programs ▾
+        </button>
+        <div id="mobile-dropdown" class="hidden flex-col">
+          <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Tech Skills</a>
+          <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Leadership</a>
+          <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Entrepreneurship</a>
+        </div>
+        <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">Events</a>
+        <a href="#" class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white">About Us</a>
         <a
           href="#"
-          class="text-[var(--primary-light)] hover:text-[var(--accent)] font-semibold"
-          >Login</a
+          class="block px-4 py-2 text-white bg-[var(--primary-light)] rounded-md font-semibold hover:bg-[var(--accent)]"
         >
-      </nav>
-
-      <!-- Mobile Nav -->
-      <div class="md:hidden relative">
-        <button id="mobile-menu-toggle" class="text-2xl">☰</button>
-        <div
-          id="mobile-menu"
-          class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] shadow-lg rounded-md z-50"
-        >
-          <a
-            href="#"
-            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-            >Home</a
-          >
-          <button
-            id="mobile-dropdown-toggle"
-            class="w-full text-left px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-          >
-            Programs ▾
-          </button>
-          <div id="mobile-dropdown" class="hidden flex-col">
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-              >Tech Skills</a
-            >
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-              >Leadership</a
-            >
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-              >Entrepreneurship</a
-            >
-          </div>
-          <a
-            href="#"
-            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-            >Events</a
-          >
-          <a
-            href="#"
-            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
-            >About Us</a
-          >
-          <a
-            href="#"
-            class="block px-4 py-2 text-[var(--primary-light)] hover:text-white hover:bg-[var(--accent)] font-semibold"
-            >Login</a
-          >
-        </div>
+          Login
+        </a>
       </div>
-    </header>
+    </div>
+  </header>
+  
+  <!-- JavaScript -->
+
+  
 
     <!-- Mobile Toggle Script -->
 
@@ -306,44 +272,33 @@
         class="flex flex-col md:flex-row gap-12 w-full max-w-7xl items-center justify-between flex-1"
       >
         <!-- Left Box with blurred background image -->
-        <div
-          class="w-full md:w-1/2 relative px-4 py-8 h-[300px] sm:h-[400px] md:h-auto"
-        >
-      
-    
-          <!-- Blurred background image -->
-         <!-- Background Image with Enhanced Design -->
-<div
-class="absolute inset-0 bg-center bg-no-repeat bg-cover z-2 filter brightness-[0.4] blur-sm"
-style="background-image: url('/img/dark-night.avif')"
-></div>
-
-<!-- Optional SVG Pattern Overlay -->
-<div class="absolute inset-0 z-0 pointer-events-none opacity-10 mix-blend-overlay">
-<img src="/img/education-pattern.svg" alt="Overlay pattern" class="w-full h-full object-cover" />
-</div>
-
-<!-- Overlay Layers -->
-<div class="absolute inset-0 bg-black/60 z-0"></div>
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--primary)]/10 z-0"></div>
-
-
-          <!-- Dark overlay to improve text contrast -->
-          <div class="absolute inset-0 bg-black/50 z-0"></div>
-
-          <!-- Overlay (optional darker tint to improve text visibility) -->
-          <div class="absolute inset-0 bg-black/20 z-0"></div>
-
+        <div class="w-full md:w-1/2 relative px-4 py-6 sm:py-8 h-[250px] sm:h-[300px] md:h-auto">
+          <!-- Themed overlay using --primary-dark -->
+          <div class="absolute inset-0 bg-[var(--primary-dark)]/40 z-0"></div>
+        
+          <!-- Optional pattern or background image can go here -->
+          <!-- Example: 
+          <div class="absolute inset-0 bg-cover bg-center z-[-1]" style="background-image: url('/img/your-image.avif');"></div>
+          -->
+        
           <!-- Text content -->
-          <div class="relative z-10">
-            <h2
-              class="text-2xl sm:text-3xl md:text-4xl font-medium sm:font-semibold leading-relaxed text-[var(--primary)]"
-            >
+          <div class="relative z-10 space-y-4">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-medium sm:font-semibold leading-relaxed text-[var(--primary)]">
               There are many paths to building the future.<br />
               We have <br />chosen education.
             </h2>
+        
+            <a
+            href="/contact"
+            class="text-sm sm:text-base text-[var(--primary)] hover:text-[var(--accent-alt)] underline underline-offset-2 transition"
+          >
+            Read more
+          </a>
+          
+          
           </div>
         </div>
+        
 
         <!-- Right Box (text content) -->
         <div class="w-full md:w-1/2 text-left px-4 md:px-8">
@@ -380,25 +335,7 @@ style="background-image: url('/img/dark-night.avif')"
       </p>
     </section>
 
-    <!-- Commitment -->
-    <!-- <section class="py-16 px-6 bg-[var(--primary-light)]/10">
-      <div
-        class="max-w-4xl mx-auto text-center bg-white/70 backdrop-blur rounded-xl shadow-lg p-8 border border-[var(--primary-light)]"
-      >
-        <h2 class="text-3xl font-bold mb-4">Our Commitment</h2>
-        <p class="text-lg mb-6">
-          There are many paths to building the future. We have chosen education.
-          ING is committed to nurturing the potential of young people across
-          Africa.
-        </p>
-        <a
-          href="/about"
-          class="bg-[var(--primary)] text-white px-6 py-3 rounded-full font-medium hover:bg-[var(--primary-light)] transition"
-        >
-          Learn More About ING
-        </a>
-      </div>
-    </section> -->
+
 
     <section
       class="relative py-20 px-6 text-white text-center bg-fixed bg-cover bg-center"
@@ -710,7 +647,7 @@ style="background-image: url('/img/dark-night.avif')"
       >
         <!-- About -->
         <div class="md:col-span-1 text-left">
-          <h2 class="text-2xl font-semibold mb-4">ING Foundation</h2>
+          <h2 class="text-2xl font-semibold mb-4">WHO WE ARE</h2>
           <p>
             At ING, we're redefining access to learning, entrepreneurship, and
             digital opportunity. Every solution we build is a step towards a
@@ -761,7 +698,7 @@ style="background-image: url('/img/dark-night.avif')"
               class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slide-img"
             />
             <img
-              src="/img/young-vill-boy.webp"
+              src="/img/two-young-girls-in-classroom.webps"
               alt="Slide 3"
               class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slide-img"
             />
@@ -815,19 +752,10 @@ style="background-image: url('/img/dark-night.avif')"
         },
         effect: "fade",
       });
-      const menuToggle = document.getElementById("mobile-menu-toggle");
-      const menu = document.getElementById("mobile-menu");
-      const dropdownToggle = document.getElementById("mobile-dropdown-toggle");
-      const dropdown = document.getElementById("mobile-dropdown");
 
-      menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
+      // small screen drop down and close btn
 
-      dropdownToggle.addEventListener("click", () => {
-        dropdown.classList.toggle("hidden");
-      });
-
+// slide image
       const slides = document.querySelectorAll(".slide-img");
       let currentSlide = 0;
 
@@ -877,6 +805,46 @@ style="background-image: url('/img/dark-night.avif')"
 
       // Change every 5 seconds
       setInterval(updateImages, 5000);
+
+
+      //dropdwon btn
+     
+  // DESKTOP DROPDOWN
+  const desktopToggle = document.getElementById("desktop-dropdown-toggle");
+  const desktopDropdown = document.getElementById("desktop-dropdown");
+
+  desktopToggle.addEventListener("click", () => {
+    desktopDropdown.classList.toggle("hidden");
+  });
+
+  // DESKTOP Outside click handler only for desktop dropdown
+  document.addEventListener("click", (e) => {
+    const isDesktop = window.innerWidth >= 768; // md: breakpoint
+    if (
+      isDesktop &&
+      !desktopToggle.contains(e.target) &&
+      !desktopDropdown.contains(e.target)
+    ) {
+      desktopDropdown.classList.add("hidden");
+    }
+  });
+
+  // MOBILE MENU TOGGLE
+  const menuToggle = document.getElementById("mobile-menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+  // MOBILE DROPDOWN
+  const dropdownToggle = document.getElementById("mobile-dropdown-toggle");
+  const dropdown = document.getElementById("mobile-dropdown");
+
+  dropdownToggle.addEventListener("click", () => {
+    dropdown.classList.toggle("hidden");
+  });
+
     </script>
   </body>
 </html>
