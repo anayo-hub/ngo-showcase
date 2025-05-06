@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --primary: #1e3a8a;
+        --accent-alt: #f59e0b;
+      }
+
+      .fade {
+        transition: opacity 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex">
+    <!-- Left Section -->
+    <div
+      class="w-1/2 bg-white flex flex-col justify-center items-center text-center p-10"
+    >
+      <h1 class="text-4xl font-bold text-[var(--primary)] mb-4">
+        Login Coming Soon!
+      </h1>
+      <p class="text-lg text-gray-600 mb-6">
+        We're working hard to bring this feature to life.
+      </p>
+      <a
+        href="index.html"
+        class="text-white bg-[var(--accent-alt)] px-6 py-2 rounded hover:bg-yellow-600 transition"
+      >
+        Go Back Home
+      </a>
+    </div>
+
+    <!-- Right Section (Image Slider) -->
+    <div class="w-1/2 relative overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          id="slider"
+          src="img/hands.jpg"
+          alt="slider"
+          class="w-full h-full object-cover fade opacity-100"
+        />
+      </div>
+    </div>
+
+    <script>
+      const images = [
+        "img/young-vill-boy.webp",
+        "img/voice-2.webp",
+        "img/voice-1-man.webp",
+        "img/voice-3.avif",
+      ]; // Replace with your actual image paths
+      let index = 0;
+      const slider = document.getElementById("slider");
+
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        slider.classList.remove("opacity-100");
+        slider.classList.add("opacity-0");
+
+        setTimeout(() => {
+          slider.src = images[index];
+          slider.classList.remove("opacity-0");
+          slider.classList.add("opacity-100");
+        }, 1000);
+      }, 4000);
+    </script>
+  </body>
+</html>
