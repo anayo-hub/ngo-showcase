@@ -16,15 +16,15 @@
       }
     </style>
   </head>
-  <body class="min-h-screen flex">
+  <body class="min-h-screen flex flex-col md:flex-row">
     <!-- Left Section -->
     <div
-      class="w-1/2 bg-white flex flex-col justify-center items-center text-center p-10"
+      class="w-full md:w-1/2 bg-white flex flex-col justify-center items-center text-center p-8 md:p-10"
     >
-      <h1 class="text-4xl font-bold text-[var(--primary)] mb-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
         Login Coming Soon!
       </h1>
-      <p class="text-lg text-gray-600 mb-6">
+      <p class="text-base md:text-lg text-gray-600 mb-6">
         We're working hard to bring this feature to life.
       </p>
       <a
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Right Section (Image Slider) -->
-    <div class="w-1/2 relative overflow-hidden">
+    <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
       <div class="absolute inset-0">
         <img
           id="slider"
@@ -53,7 +53,7 @@
         "img/voice-2.webp",
         "img/voice-1-man.webp",
         "img/voice-3.avif",
-      ]; // Replace with your actual image paths
+      ];
       let index = 0;
       const slider = document.getElementById("slider");
 
