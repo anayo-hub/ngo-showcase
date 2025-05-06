@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ING – Inspiring Next Generation</title>
+    <!-- Include Font Awesome in your <head> if not already -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2596be; /* Primary Blue */
+        --primary-light: #5c7cb3; /* Secondary Blue */
+        --primary-dark: #1e3a55; /* Darker Blue for text */
+        --background: #f3f6fa; /* Background Color */
+        --text: #3c2f2f; /* Text Color */
+        --accent: #2596be; /* Primary Blue */
+        --accent-alt: #5c7cb3; /* Secondary Blue */
+        --subtle: #606c38; /* Subtle Color */
+      }
+
+      /* h2 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  } */
+    </style>
+  </head>
+  <body class="bg-[var(--background)] text-[var(--text)]">
+    <!-- Navbar -->
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <header
+      class="flex justify-between items-center px-6 py-4 bg-[var(--background)] shadow-md sticky top-0 z-50"
+    >
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-[var(--primary)]">LOGO</h1>
+
+      <!-- Social Icons -->
+      <div class="flex items-center space-x-4 text-xl md:ml-6">
+        <a
+          href="https://twitter.com"
+          class="text-[#1da1f2] hover:scale-110 transition-transform"
+          target="_blank"
+        >
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://wa.me/234XXXXXXXXXX"
+          class="text-[#25d366] hover:scale-110 transition-transform"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 font-medium items-center relative">
+        <a href="/" class="hover:text-[var(--accent-alt)]">Home</a>
+
+        <!-- Programs Dropdown -->
+        <div class="relative">
+          <button
+            id="desktop-dropdown-toggle"
+            class="hover:text-[var(--accent-alt)] focus:outline-none"
+          >
+            Programs ▾
+          </button>
+          <div
+            id="desktop-dropdown"
+            class="hidden absolute left-0 mt-2 flex-col bg-[var(--background)] shadow-lg rounded border border-[var(--subtle)] z-50 min-w-[160px]"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Tech Skills</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Leadership</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Entrepreneurship</a
+            >
+          </div>
+        </div>
+
+        <a href="#" class="hover:text-[var(--accent-alt)]">Events</a>
+        <a href="/about-us.html" class="hover:text-[var(--accent-alt)]"
+          >About Us</a
+        >
+
+        <!-- Login Button -->
+        <a
+          href="#"
+          class="ml-2 px-4 py-2 bg-[var(--primary-light)] text-white rounded-md font-semibold hover:bg-[var(--accent)] transition-colors"
+        >
+          Login
+        </a>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <div class="md:hidden relative">
+        <button id="mobile-menu-toggle" class="text-2xl">☰</button>
+        <div
+          id="mobile-menu"
+          class="hidden absolute right-0 mt-2 w-48 bg-[var(--background)] shadow-lg rounded-md z-50"
+        >
+          <a
+            href="#"
+            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+            >Home</a
+          >
+          <button
+            id="mobile-dropdown-toggle"
+            class="w-full text-left px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+          >
+            Programs ▾
+          </button>
+          <div id="mobile-dropdown" class="hidden flex-col">
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Tech Skills</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Leadership</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+              >Entrepreneurship</a
+            >
+          </div>
+          <a
+            href="#"
+            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+            >Events</a
+          >
+          <a
+            href="/about-us.html"
+            class="block px-4 py-2 hover:bg-[var(--accent)] hover:text-white"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 text-white bg-[var(--primary-light)] rounded-md font-semibold hover:bg-[var(--accent)]"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section>
+      <div
+        class="relative w-full h-[300px] sm:h-[400px] bg-cover bg-center flex items-center justify-center text-center px-6"
+        style="
+          background-image: url('/img/photo-1439792675105-701e6a4ab6f0.avif');
+        "
+      >
+        <div class="absolute inset-0 bg-black/40"></div>
+        <h1 class="relative z-10 text-4xl md:text-5xl font-bold text-white">
+          About Us
+        </h1>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-16 text-center px-4 sm:px-6 md:px-8">
+      <h2 class="text-3xl font-semibold text-[var(--primary)] mb-4">
+        Our Mission
+      </h2>
+      <p
+        class="max-w-3xl mx-auto text-lg leading-relaxed text-[var(--primary-dark)]"
+      >
+        We are committed to building a better future through education,
+        innovation, and community development.
+      </p>
+    </section>
+
+    <!-- What We Do -->
+    <section class="bg-white py-16 px-4 sm:px-6 md:px-8">
+      <h2
+        class="text-3xl font-semibold text-[var(--primary)] mb-12 text-center"
+      >
+        What We Do
+      </h2>
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+      >
+        <div>
+          <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-2">
+            Educational Programs
+          </h3>
+          <p class="text-sm leading-relaxed text-[var(--text)]">
+            We provide learning platforms, materials, and opportunities for all
+            ages and backgrounds.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-2">
+            Community Outreach
+          </h3>
+          <p class="text-sm leading-relaxed text-[var(--text)]">
+            Partnering with local groups to empower underserved communities
+            through mentorship and funding.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-2">
+            Innovation & Growth
+          </h3>
+          <p class="text-sm leading-relaxed text-[var(--text)]">
+            Encouraging forward-thinking and solutions that shape a more
+            equitable tomorrow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-[var(--primary)] text-white text-center py-16 px-4">
+      <h2 class="text-3xl font-semibold mb-4">Let’s Build Together</h2>
+      <p class="mb-6 text-lg max-w-2xl mx-auto">
+        Join us in shaping the future — one initiative, one life, one step at a
+        time.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-[var(--primary)] font-medium px-6 py-2 rounded-full hover:bg-[var(--accent-alt)] hover:text-white transition"
+      >
+        Connect with Us
+      </a>
+    </section>
+
+    <footer class="bg-[var(--primary-dark)] text-white py-16 px-6 mt-20">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start"
+      >
+        <!-- About -->
+        <div class="md:col-span-1 text-left">
+          <h2 class="text-2xl font-semibold mb-4">WHO WE ARE</h2>
+          <p>
+            At ING, we're redefining access to learning, entrepreneurship, and
+            digital opportunity. Every solution we build is a step towards a
+            brighter future for all.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-1 text-left">
+          <h3 class="font-semibold mb-2">Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/about-us.html"
+                class="text-white hover:text-[var(--primary)]"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-[var(--primary)]"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Image Slider -->
+        <div class="md:col-span-1 md:order-last w-full">
+          <div
+            class="relative overflow-hidden rounded-lg h-40 md:h-48 shadow-md"
+          >
+            <img
+              src="/img/young-vill-boy.webp"
+              alt="Slide 1"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 slide-img"
+            />
+            <img
+              src="/img/techboy.webp"
+              alt="Slide 2"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slide-img"
+            />
+            <img
+              src="/img/two-young-girls-in-classroom.webp"
+              alt="Slide 3"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 slide-img"
+            />
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="md:col-span-1 text-left md:text-right">
+          <h3 class="font-semibold mb-2 text-white">Follow Us</h3>
+          <div class="flex justify-start md:justify-end space-x-4 text-2xl">
+            <a
+              href="https://facebook.com"
+              class="text-[#1877f2]"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://twitter.com"
+              class="text-[#1da1f2]"
+              aria-label="Twitter"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://instagram.com"
+              class="text-[#e1306c]"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://wa.me/234XXXXXXXXXX"
+              class="text-[#25d366]"
+              aria-label="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-left text-sm">
+        <p>&copy; 2025 ING Foundation. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        effect: "fade",
+      });
+
+      // small screen drop down and close btn
+
+      // slide image
+      const slides = document.querySelectorAll(".slide-img");
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("opacity-100");
+        slides[currentSlide].classList.add("opacity-0");
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.remove("opacity-0");
+        slides[currentSlide].classList.add("opacity-100");
+      }, 4000); // Change every 4 seconds
+
+      const smallScreenImages = [
+        "img/two-young-girls-in-classroom.webp",
+        "img/school-children.webp",
+        "img/hands.jpg",
+        "img/worksho.webp",
+        "img/school-children.webp",
+      ];
+
+      const largeScreenImages = [
+        "img/two-young-girls-in-classroom.webp",
+        "img/school-children.webp",
+        "img/hands.jpg",
+        "img/worksho.webp",
+        "img/school-children.webp",
+      ];
+
+      let currentIndex = 0;
+
+      function updateImages() {
+        const smallImg = document.getElementById("smallScreenImage");
+        const largeImg = document.getElementById("largeScreenImage");
+
+        // Update only if element exists (in case one is hidden on screen)
+        if (smallImg) {
+          smallImg.src = smallScreenImages[currentIndex];
+        }
+        if (largeImg) {
+          largeImg.src = largeScreenImages[currentIndex];
+        }
+
+        // Cycle to next image
+        currentIndex = (currentIndex + 1) % smallScreenImages.length;
+      }
+
+      // Change every 5 seconds
+      setInterval(updateImages, 5000);
+
+      //dropdwon btn
+
+      // DESKTOP DROPDOWN
+      const desktopToggle = document.getElementById("desktop-dropdown-toggle");
+      const desktopDropdown = document.getElementById("desktop-dropdown");
+
+      desktopToggle.addEventListener("click", () => {
+        desktopDropdown.classList.toggle("hidden");
+      });
+
+      // DESKTOP Outside click handler only for desktop dropdown
+      document.addEventListener("click", (e) => {
+        const isDesktop = window.innerWidth >= 768; // md: breakpoint
+        if (
+          isDesktop &&
+          !desktopToggle.contains(e.target) &&
+          !desktopDropdown.contains(e.target)
+        ) {
+          desktopDropdown.classList.add("hidden");
+        }
+      });
+
+      // MOBILE MENU TOGGLE
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // MOBILE DROPDOWN
+      const dropdownToggle = document.getElementById("mobile-dropdown-toggle");
+      const dropdown = document.getElementById("mobile-dropdown");
+
+      dropdownToggle.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
